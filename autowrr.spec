@@ -1,5 +1,5 @@
-Summary:	Program u³atwiaj±cy konfigurowanie kolejki WRR
-Summary(pl):	Program that can help you configuring WRR queue
+Summary:	Program that can help you configuring WRR queue
+Summary(pl):	Program u³atwiaj±cy konfigurowanie kolejki WRR
 Name:		autowrr
 Version:	0.5a
 Release:	1
@@ -7,10 +7,10 @@ License:	GPL
 Group:		Networking/Admin
 Source0:	http://autowrr.olgroup.net/download/%{name}-%{version}.tar.gz
 URL:		http://autowrr.olgroup.net/
+BuildRequires:	cdk-devel
+BuildRequires:	ncurses-devel
 Requires:	firewall-userspace-tool
-Requires:	ncurses
 Requires:	gawk
-Requires:	cdk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
@@ -18,7 +18,7 @@ AutoWRR is a program that can help you configuring WRR queue.
 
 %description -l pl
 AutoWRR jest w zasadzie programem maj±cym pomagaæ optymalnie
-skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn:
+skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn.:
 
     - Protokó³ ICMP (min. ping) w klasie priorytetowej
     - Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
@@ -38,15 +38,15 @@ skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn:
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir}/{autowrr,rc.d/init.d}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir}/autowrr,/etc/rc.d/init.d}
 
 install autowrr $RPM_BUILD_ROOT%{_bindir}
 install autowrr-wizard $RPM_BUILD_ROOT%{_bindir}
-install wrr $RPM_BUILD_ROOT%{_sysconfdir}/rc.d/init.d/
-install start.sh $RPM_BUILD_ROOT%{_sysconfdir}/autowrr/
-install stop.sh $RPM_BUILD_ROOT%{_sysconfdir}/autowrr/
-install htb $RPM_BUILD_ROOT%{_sysconfdir}/autowrr/
-install cbq $RPM_BUILD_ROOT%{_sysconfdir}/autowrr/
+install wrr $RPM_BUILD_ROOT/etc/rc.d/init.d
+install start.sh $RPM_BUILD_ROOT%{_sysconfdir}/autowrr
+install stop.sh $RPM_BUILD_ROOT%{_sysconfdir}/autowrr
+install htb $RPM_BUILD_ROOT%{_sysconfdir}/autowrr
+install cbq $RPM_BUILD_ROOT%{_sysconfdir}/autowrr
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -57,4 +57,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_sysconfdir}/autowrr
 %attr(755,root,root) %{_sysconfdir}/autowrr/*
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_sysconfdir}/rc.d/init.d/wrr
+%attr(754,root,root) /etc/rc.d/init.d/wrr
