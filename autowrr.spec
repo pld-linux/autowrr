@@ -14,7 +14,12 @@ Requires:	gawk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description 
-AutoWRR is a program that can help you configuring WRR queue.
+AutoWRR is a program that can help you to configure WRR queue
+optimally, i.e.:
+ - put ICMP (incl. ping) in priority class
+ - specify ports to put in priority class
+ - use SFQ queue beside WRR to fairly divide bandwidth between
+   connections from one host.
 
 %description -l pl
 AutoWRR jest w zasadzie programem maj±cym pomagaæ optymalnie
