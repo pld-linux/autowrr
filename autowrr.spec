@@ -58,4 +58,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_sysconfdir}/autowrr/*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sysconfdir}/rc.d/init.d/wrr
-%attr(640,root,root) %verify(not size md5 mtime) %config(noreplace) %{_sysconfdir}/autowrr/*
