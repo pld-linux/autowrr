@@ -16,20 +16,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description 
 AutoWRR is a program that can help you to configure WRR queue
 optimally, i.e.:
- - put ICMP (incl. ping) in priority class
- - specify ports to put in priority class
- - use SFQ queue beside WRR to fairly divide bandwidth between
-   connections from one host.
+- put ICMP (incl. ping) in priority class
+- specify ports to put in priority class
+- use SFQ queue beside WRR to fairly divide bandwidth between
+  connections from one host.
 
 %description -l pl
 AutoWRR jest w zasadzie programem maj±cym pomagaæ optymalnie
 skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn.:
-
- - Protokó³ ICMP (min. ping) w klasie priorytetowej
- - Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
-   priorytetowej
- - Poza WRR u¿yta jeszcze zosta³a kolejka SFQ - w celu sprawiedliwego
-   podzia³u prêdko¶ci po³±czeñ dla jednego komputera
+- Protokó³ ICMP (min. ping) w klasie priorytetowej
+- Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
+  priorytetowej
+- Poza WRR u¿yta jeszcze zosta³a kolejka SFQ - w celu sprawiedliwego
+  podzia³u prêdko¶ci po³±czeñ dla jednego komputera
 
 %prep
 %setup -q
@@ -37,8 +36,8 @@ skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn.:
 %build
 %configure
 %{__make} \
-        CC="%{__cc}" \
-        CFLAGS="%{rpmcflags}"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 
 %install
