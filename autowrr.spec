@@ -25,11 +25,11 @@ optimally, i.e.:
 AutoWRR jest w zasadzie programem maj±cym pomagaæ optymalnie
 skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn.:
 
-    - Protokó³ ICMP (min. ping) w klasie priorytetowej
-    - Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
-      priorytetowej
-    - Poza WRR u¿yta jeszcze zosta³a kolejka SFQ - w celu sprawiedliwego
-      podzia³u prêdko¶ci po³±czeñ dla jednego komputera
+ - Protokó³ ICMP (min. ping) w klasie priorytetowej
+ - Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
+   priorytetowej
+ - Poza WRR u¿yta jeszcze zosta³a kolejka SFQ - w celu sprawiedliwego
+   podzia³u prêdko¶ci po³±czeñ dla jednego komputera
 
 %prep
 %setup -q
