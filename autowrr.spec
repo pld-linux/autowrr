@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Admin
 Source0:	http://autowrr.olgroup.net/download/%{name}-%{version}.tar.gz
+# Source0-md5:	0b5504df84fc0deb932e5bf2c907bcef
 URL:		http://autowrr.olgroup.net/
 BuildRequires:	cdk-devel
 BuildRequires:	ncurses-devel
