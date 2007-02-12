@@ -1,5 +1,5 @@
 Summary:	Program that can help you configuring WRR queue
-Summary(pl):	Program u³atwiaj±cy konfigurowanie kolejki WRR
+Summary(pl.UTF-8):   Program uÅ‚atwiajÄ…cy konfigurowanie kolejki WRR
 Name:		autowrr
 Version:	0.5a
 Release:	1
@@ -22,14 +22,14 @@ optimally, i.e.:
 - use SFQ queue beside WRR to fairly divide bandwidth between
   connections from one host.
 
-%description -l pl
-AutoWRR jest w zasadzie programem maj±cym pomagaæ optymalnie
-skonfigurowaæ kolejkê WRR. Optymalna konfiguracja tzn.:
-- Protokó³ ICMP (min. ping) w klasie priorytetowej
-- Mo¿liwo¶æ okre¶lenia portów maj±cych byæ równie¿ w klasie
+%description -l pl.UTF-8
+AutoWRR jest w zasadzie programem majÄ…cym pomagaÄ‡ optymalnie
+skonfigurowaÄ‡ kolejkÄ™ WRR. Optymalna konfiguracja tzn.:
+- ProtokÃ³Å‚ ICMP (min. ping) w klasie priorytetowej
+- MoÅ¼liwoÅ›Ä‡ okreÅ›lenia portÃ³w majÄ…cych byÄ‡ rÃ³wnieÅ¼ w klasie
   priorytetowej
-- Poza WRR u¿yta jeszcze zosta³a kolejka SFQ - w celu sprawiedliwego
-  podzia³u prêdko¶ci po³±czeñ dla jednego komputera
+- Poza WRR uÅ¼yta jeszcze zostaÅ‚a kolejka SFQ - w celu sprawiedliwego
+  podziaÅ‚u prÄ™dkoÅ›ci poÅ‚Ä…czeÅ„ dla jednego komputera
 
 %prep
 %setup -q
