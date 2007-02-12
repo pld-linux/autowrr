@@ -1,5 +1,5 @@
 Summary:	Program that can help you configuring WRR queue
-Summary(pl.UTF-8):   Program ułatwiający konfigurowanie kolejki WRR
+Summary(pl.UTF-8):	Program ułatwiający konfigurowanie kolejki WRR
 Name:		autowrr
 Version:	0.5a
 Release:	1
